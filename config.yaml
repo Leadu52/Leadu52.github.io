@@ -1,0 +1,293 @@
+baseURL: "https://Lea-durget.github.io"
+languageCode: "en-us"
+title: " Mon Portfolio"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: AP
+      name: AP et Stages
+      title: Projets AP et Stages
+      url: /Projets/
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Portfolio"
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Portfolio de léa" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Bonjour, je suis"
+    title: "Léa DURGET."
+    subtitle: "Je suis étudiante en BTS SIO."
+    content: "Je suis passionnée par l'informatique. J'aime autant le développement, les systèmes, les réseaux et la cybersécurité."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Compétences"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://example.com
+        - icon: fab fa-x-twitter
+          url: https://example.com
+      customIcons:
+        - icon: /fav.png
+          url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "Compétences"
+    image: "/images/me.png"
+    content: |-
+      Je suis étudiante en BTS SIO à Chaumont.
+
+      Je suis acctuellement en train de travailler sur plusieurs projets
+    skills:
+      enable: true
+      title: "Voici quelques téchnologie que je maitrise:"
+      items:
+        - "HTML"
+        - "CSS"
+        - "JavaScript"
+        - "C#"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "travail sur machine"
+        company: "Bongrain gérard"
+        companyUrl: "https://www.capricedesdieux.com/"
+        date: "juillet-Août 2023"
+        featuredLink:
+          enable: true
+          url: "https://www.ladivinefromagerie.com/"
+        content: |
+
+
+      - job: "Stage Lycée"
+        company: "Ordi-stock"
+        companyUrl: "https://example.com"
+        date: "17 semaines de 2021-2023"
+        featuredLink:
+          enable: true
+          name: ""
+          url: "https://annuaire-entreprises.data.gouv.fr/entreprise/ordi-stock-432765980"
+        content: 
+        
+      - job: "Stage Lycée"
+        company: "Klinic du mobile"
+        companyUrl: "https://example.com"
+        date: "1 semaine - 2023"
+        featuredLink:
+          enable: true
+          name: ""
+          url: "https://annuaire-entreprises.data.gouv.fr/etablissement/88751554200017"
+        content: 
+        
+      - job: "Stage Lycée"
+        company: "Pouilly electricité"
+        companyUrl: "https://example.com"
+        date: "4 semaines - 2023"
+        featuredLink:
+          enable: true
+          name: ""
+          url: "https://annuaire-entreprises.data.gouv.fr/entreprise/pouilly-electricite-sas-843192493"
+        content: 
+        
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "BTS SIO"
+        school:
+          name: "Lycée Edmé Bouchardon, Chaumont"
+          url: "https://www.education.gouv.fr/annuaire/52903/chaumont/lycee/0520844k/lycee-edme-bouchardon.html"
+        date: "2023 - présent"
+        content: |-
+          option SLAM
+            - Option SLAM  
+            -
+      - title: "baccalauréat professionnel systèmes numériques"
+        school:
+          name: "Lycée Eugène DECOMBLE, Chaumont"
+          url: "https://www.education.gouv.fr/annuaire/52000/chaumont/lycee/0520008b/lycee-professionnel-eugene-decomble.html"
+        date: "2020 - 2023"
+        content: |-
+          Option RISC
+          - Option RISC  
+          - Mention bien 
+
+
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Ma boîte de mail est toujours ouverte. Que vous ayez une question ou que vous souhaitiez simplement vous dire bonjour, je ferai de mon mieux pour vous répondre!
+    email: durget.lea@gmail.com
+    btnName: Contactez-moi
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
+      twitter: https://twitter.com
+      instagram: https://instagram.com
+      facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
